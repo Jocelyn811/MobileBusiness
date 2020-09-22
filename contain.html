@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>移动营业厅</title>
+    <link rel="stylesheet" href="style/contain.css">  
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            <img src="assert/中国移动.png" alt="">
+        </div>
+        <div class="navbar">
+        <ul>
+            <li><a href="">首页</a></li>
+            <li><a href="">移动商城</a></li>
+            <li><a href="">网上营业厅</a></li>
+            <li><a href="">我的移动</a></li>
+            <li><a href="">服务中心</a></li>
+            <li><a href="" class="current">后台管理</a></li>
+        </ul>
+        </div>
+        <div class="navSearch">
+            <input type="text" placeholder="请输入关键字">
+            <a href=""><img src="assert/搜索.png" alt=""></a>
+        </div>
+        <div class="person">
+            <a href="">个人中心<img src="" alt=""></a>
+            <a href=""><img src="assert/头像.png" alt=""></a>
+            <div class="dropdown-content">
+              <ul>
+                  <li><a href="">充值交费</a></li>
+                  <li><a href="">我的账户</a></li>
+                  <li><a href="">我的信息</a></li>
+                  <li><a href="">我的订单</a></li>
+                  <li><a href="">我的消息</a></li>
+                  <li><a href="">售后服务</a></li>
+                  <li><a href="">我的邮箱</a></li>
+              </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- 使网页不再空 -->
+<div class="banner">
+    <div class="container">
+    <div class="slidebar" id="sliderbar" style="width:200px;  float:left;">
+        <ul>
+            <li><a href=""><img src="assert/icon/1 (1).png" alt="">业务办理<span style="float: right;font-family: arial; ">></span> </a></li>
+            <li><a href=""><img src="assert/icon/1 (2).png" alt="">手机购买<span style="float: right;font-family: arial; ">></span> </a></li>
+            <li><a href=""><img src="assert/icon/1 (4).png" alt="">家庭服务<span style="float: right;font-family: arial; ">></span> </a></li>
+            <li><a href=""><img src="assert/icon/1 (5).png" alt="">智能硬件<span style="float: right;font-family: arial; ">></span> </a></li>
+            <li><a href=""><img src="assert/icon/1 (6).png" alt="">查询服务<span style="float: right;font-family: arial; ">></span> </a></li>
+            <li><a href=""><img src="assert/icon/1 (7).png" alt="">特色专区<span style="float: right;font-family: arial; ">></span> </a></li>
+        </ul>
+    </div>
+<div class="box" id="box">
+    <div class="inner">
+        <ul>
+            <li><a href="#"><img src="assert/banner1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="assert/banner2.jpg" alt=""></a></li>
+            <li><a href="#"><img src="assert/banner3.png" alt=""></a></li>
+        </ul>
+        <ol class="bar">
+        </ol>
+        <div id="arr">
+              <span id="left"> <</span>
+              <span id="right">></span>
+        </div>
+    </div>
+   
+</div>
+<div class="rightbar">
+    <div class="meunIcon">
+    <ul>  
+        <li><a href=""><img src="assert/menu/ (1).gif" alt="">优惠专区</a></li>
+        <li><a href=""><img src="assert/menu/ (2).gif" alt="">话费充值</a></li>
+        <li><a href=""><img src="assert/menu/ (3).gif" alt="">业务办理</a></li>
+        <li><a href=""><img src="assert/menu/ (4).gif" alt="">账单明细</a></li>
+        <li><a href=""><img src="assert/menu/ (5).gif" alt="">积分兑换</a></li>
+        <li><a href=""><img src="assert/menu/ (1).png" alt="">国际业务</a></li>
+    </ul> 
+    <input type="submit" value="立即充值"> 
+    </div>
+</div>
+</div>
+</div>
+<div id="mainBody">
+    <table class="table table-hover table-bordered container" id="mytable">
+        <thead>
+            <tr>
+                <th>选中</th>
+                <th>手机号</th>
+                <th>用户名</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>身份证号</th>
+                <th>职业</th>
+                <th>家庭住址</th>
+                <th>话费（元）</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" onclick="checkAll(this)"/></td>
+                <td colspan="3"><a href="javascript:;" class="btn btn-danger" role="button" onclick="delAll()">批量删除</a></td>
+                <td colspan="3"><a href="" onclick="saveAll()" id="save">保存数据</a></td>
+                <td colspan="3"></td>
+            </tr>
+        </thead> 
+        <tbody id="listTable">    
+            <tr>
+                <td><input type="checkbox" name="item" /></td>
+                <td>13867012157</td>
+                <td>周灿</td>
+                <td>女</td>
+                <td>19</td>
+                <td>330821199910206028</td>
+                <td>学生</td>
+                <td>江苏省南京市南京邮电大学</td>
+                <td>5000</td>
+                <td>
+                    <input type="button" name="" value="删除" class="btn btn-danger" onclick="del(this)" />
+                    <input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="item" /></td>
+                <td>18778962417</td>
+                <td>梁佩欣</td>
+                <td>女</td>
+                <td>19</td>
+                <td>450924199908113625</td>
+                <td>学生</td>
+                <td>江苏省南京市南京邮电大学</td>
+                <td>0</td>
+                <td>
+                    <input type="button" name="" value="删除" class="btn btn-danger" onclick="del(this)" />
+                    <input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="item" /></td>
+                <td>19802578961</td>
+                <td>虞黄悦</td>
+                <td>女</td>
+                <td>19</td>
+                <td>320683199911168242</td>
+                <td>学生</td>
+                <td>江苏省南京市南京邮电大学</td>
+                <td>2</td>
+                <td>
+                    <input type="button" name="" value="删除" class="btn btn-danger" onclick="del(this)" />
+                    <input type="button" name="" value="修改" class="btn btn-info" onclick="modify(this)" />
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>
+<div id="menu" class="container">
+    <!-- 菜单2；查找数据 -->
+<div class="menu1">
+    <table>
+        <tr>
+            <th>查找方式</th>
+            <td><select id='searchBox'>
+                <option value="手机号">手机号</option>
+                <option value="用户名">用户名</option>
+                <option value="身份证号">身份证号</option>
+                <option value="话费">话费</option>
+            </select></td>
+        </tr>
+        <tr>
+            <th>内容</th>
+            <td><input type="text" id='searchFor'></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" value="重置" onclick="reset()">
+                <input type="button" value="查找" onclick="searchObj()">
+            </td>
+        </tr>
+    </table>
+</div>
+    <!-- 菜单3：数组排序 -->
+<div class="menu2">
+    <table>
+        <tr>
+            <th>排序</th>
+            <td>
+                <select name="" id="chooseBox">
+                    <option value="年龄">年龄</option>
+                    <option value="身份证号">身份证号</option>
+                    <option value="话费">话费</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>排序方式</th>
+            <td>
+                <select name="" id="rankBox">
+                    <option value="从大到小">从大到小</option>
+                    <option value="从小到大">从小到大</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+                <td colspan="2">
+                   <input type="button" value="重置" onclick="reset()">
+                   <input type="button" value="排序" onclick="rank()"/>
+                </td>
+        </tr>
+    </table>
+</div>
+    <!-- 菜单1：增加、修改和删除数据 -->
+    <div class="menu3">
+        <h1>新增数据</h1>
+    <form>
+        <table class="table table-hover table-bordered">
+            <tr>
+                <th>手机号</th>
+                <td><input type="text" name="" class="form-control" id="phone" /></td>
+            </tr>
+            <tr>
+                <th>用户名</th>
+                <td><input type="text" name="" class="form-control" id="username" /></td>
+            </tr>
+            <tr>
+                <th>性别</th>
+                <td><input type="text" name="" class="form-control" id="sex" /></td>
+            </tr>
+            <tr>
+                <th>年龄</th>
+                <td><input type="text" name="" class="form-control" id="age" /></td>
+            </tr>
+            <tr>
+                <th>身份证号</th>
+                <td><input type="text" name="" class="form-control" id="ID" /></td>
+            </tr>
+            <tr>
+                <th>职业</th>
+                <td><input type="text" name="" class="form-control" id="Job" /></td>
+            </tr>
+            <tr>
+                <th>家庭住址</th>
+                <td><input type="text" name="" class="form-control" id="homePlace" /></td>
+            </tr>
+            <tr>
+                <th>话费（元）</th>
+                <td><input type="text" name="" class="form-control" id="money" /></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="reset" value="重置" class="btn btn-primary" id="reset" />   
+                    <input type="button" value="添加"  class="btn btn-success" id="add"  onclick="addList()" />
+                    <input type="button" value="更新"  class="btn btn-info" id="new"  onclick="update()" />
+                </td>
+            </tr>
+        </table>
+    </form>
+    </div>
+</div>
+</div>
+<script src="script/functions.js"></script>
+<script src="script/beautify.js"></script>
+</body>
+</html>
